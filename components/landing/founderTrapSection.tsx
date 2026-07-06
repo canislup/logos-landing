@@ -2,7 +2,7 @@ import Image from "next/image";
 import TitleTag from "@/components/landing/title-tag";
 import { BriefcaseIcon, ClockIcon, PlusIcon, EnvelopeIcon, PhoneIcon, SparklesIcon, ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 import MainBtn from "@/components/main-btn";
-import PointContainer from "@/components/pointContainer";
+import PointCard from "@/components/pointCard";
 
 const FounderTrap = () => {
     const painPoints = [
@@ -39,7 +39,7 @@ const FounderTrap = () => {
     ];
 
     return (
-        <section className="flex flex-col items-center justify-center pt-32 pb-24 bg-[#FCFAF7] px-4 sm:px-8 md:px-12 selection:bg-amber-100 selection:text-amber-900">
+        <section id={"pain-points"} className="flex flex-col items-center justify-center pt-32 pb-24 bg-[#FCFAF7] px-4 sm:px-8 md:px-12 selection:bg-amber-100 selection:text-amber-900">
             {/* Elegant Luxury Badge Header */}
             <TitleTag
                 text="The Operational Bottleneck"
@@ -64,7 +64,7 @@ const FounderTrap = () => {
             </div>
 
             {/* Split Composition Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start w-full max-w-6xl">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full max-w-6xl">
 
                 {/* Left Frame: Luxury Editorial Border Graphic Image */}
                 <div className="lg:col-span-5 relative w-full aspect-4/3 lg:aspect-[3/4] rounded-sm group/img">
@@ -86,7 +86,10 @@ const FounderTrap = () => {
                 {/* Right Frame: Monochromatic Clean Pain Points Grid */}
                 <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
                     {painPoints.map((item, index) => (
-                        <PointContainer key={index} icon={item.icon} title={item.title} description={item.desc} />
+                        <PointCard key={index}
+                                   variant="painpoint"
+                                   icon={item.icon}
+                                   text={item.desc} />
                     ))}
                 </div>
 

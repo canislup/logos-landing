@@ -8,7 +8,7 @@ const benefits = [
     "Results In One Week"
 ]
 
-const Hero2 = () => {
+export default function HeroSection(){
     return (
         <section className="min-h-[95dvh] flex flex-col justify-center items-center bg-[#FCFAF7] px-4 sm:px-10 py-16 md:py-24 relative overflow-hidden selection:bg-amber-100 selection:text-amber-900">
             {/* Architectural Subtle Grid Background Artifacts */}
@@ -68,7 +68,7 @@ const Hero2 = () => {
                     </a>
                 </div>
                 <div className="text-center w-full sm:w-auto">
-                    <a href="#process" className="text-sm font-medium text-slate-600 hover:text-slate-900 border-b border-transparent hover:border-slate-900 tracking-wide transition-all duration-300 py-2 block">
+                    <a href="#pain-points" className="text-sm font-medium text-slate-600 hover:text-slate-900 border-b border-transparent hover:border-slate-900 tracking-wide transition-all duration-300 py-2 block">
                         See How It Works
                     </a>
                 </div>
@@ -81,5 +81,3 @@ const Hero2 = () => {
         </section>
     )
 }
-
-export default Hero2;

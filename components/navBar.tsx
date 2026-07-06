@@ -14,7 +14,7 @@ const NAV_LINKS: NavLink[] = [
     { label: "Home", href: "/" },
     { label: "Why Logos", href: "/why-logos" },
     { label: "Solutions", href: "/solutions" },
-    { label: "Success Stories", href: "/success-stories" },
+    { label: "Success Stories", href: "/#results" },
 ];
 
 const NavBar = () => {
