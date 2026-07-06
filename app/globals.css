@@ -1,26 +1,125 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* System Defaults */
+  --background: #FCFAF7;
+  --foreground: #0F172A;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* ==========================================
+     BRAND COLOR PALETTE (Luxury Growth Architecture)
+     ========================================== */
+  /* Main Backgrounds */
+  --color-luxury-bg: #FCFAF7;          /* Premium warm cream canvas */
+  --color-luxury-white: #FFFFFF;       /* Pure white for card elevation */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Brand Typography & Structure */
+  --color-slate-900: #0F172A;          /* High-contrast deep charcoal */
+  --color-slate-800: #1E293B;          /* Secondary dark headings */
+  --color-slate-600: #475569;          /* Readable body paragraph gray */
+  --color-slate-400: #94A3B8;          /* Micro-copy or subtle accents */
+
+  /* Luxury Gold / Amber Accent Metrics */
+  --color-amber-950: #451A03;          /* Darkest rich oak finish */
+  --color-amber-900: #78350F;          /* Executive brand hover accent */
+  --color-amber-800: #92400E;          /* Luxury anchor color (links, tags) */
+  --color-amber-700: #B45309;          /* Subdued focus gold icon/border */
+
+  /* Warning & Subtle Accents */
+  --color-salmon-pink: #FCA5A5;        /* Soft coral accent */
+  --color-light-green: #E6FFD0;        /* Retained legacy utility green */
+
+  /* ==========================================
+     TYPOGRAPHY ARCHITECTURE
+     ========================================== */
+  --font-sans: "DM Sans", "Inter", var(--font-geist-sans), sans-serif;
+  --font-serif: "Playfair Display", "Didot", "Georgia", serif;
+  --font-mono: "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-luxury-bg);
+  color: var(--color-slate-900);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom selection hue for a high-end touch */
+::selection {
+  background-color: rgba(217, 119, 6, 0.15); /* Soft amber tint */
+  color: #78350F;
+}
+
+@layer components {
+  /* ==========================================
+     GLOBAL TYPOGRAPHY COMPONENTS
+     ========================================== */
+  /* Premium Editorial Title */
+  .hero-title {
+    @apply text-center mt-5 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-normal text-slate-900 tracking-tight leading-[1.12] px-2;
+  }
+
+  /* Clean, highly readable prose text layout */
+  .supporting-text {
+    @apply text-center mt-0 text-base sm:text-lg md:text-xl text-slate-600 font-light max-w-prose px-4 leading-relaxed text-balance;
+  }
+
+  /* ==========================================
+     NAVIGATION COMPONENT tokens
+     ========================================== */
+  .navbar {
+    @apply sticky top-0 z-50 flex items-center justify-between px-6 py-4 md:px-12 bg-white/80 backdrop-blur-md border-b border-slate-200/40;
+  }
+
+  .nav-links {
+    @apply hidden md:flex items-center gap-8;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors duration-300 tracking-wide;
+  }
+
+  /* Crisp Luxury Call-To-Action Layouts */
+  .nav-cta {
+    @apply ml-2 rounded-none bg-slate-900 px-6 py-2.5 text-xs font-medium uppercase tracking-widest text-white shadow-sm hover:bg-amber-950 transition-all duration-300;
+  }
+
+  /* Mobile Interface Triggers */
+  .mobile-menu-btn {
+    @apply md:hidden flex flex-col justify-center items-center w-9 h-9 rounded-none hover:bg-slate-100 transition-colors;
+  }
+
+  .mobile-menu-bar {
+    @apply block w-5 h-0.5 bg-slate-700 transition-all duration-300;
+  }
+
+  .mobile-menu {
+    @apply md:hidden absolute top-full left-0 w-full flex flex-col gap-1 bg-white border-b border-slate-200 shadow-xl px-6 py-6;
+  }
+
+  .mobile-nav-link {
+    @apply text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-none px-3 py-3 transition-colors;
+  }
+
+  .mobile-nav-cta {
+    @apply mt-4 rounded-none bg-slate-900 py-3.5 text-center text-xs font-medium uppercase tracking-widest text-white hover:bg-amber-950 transition-colors;
+  }
+
+  /* ==========================================
+     LAYOUT DECORATIVE ARTIFACTS
+     ========================================== */
+  .logo-container {
+    @apply h-12 w-36 relative;
+  }
+
+  .logo {
+    @apply object-contain object-left;
+  }
+
+  /* Subtle structural separation lines */
+  .luxury-divider {
+    @apply w-12 h-[1px] bg-amber-700/30 my-6 mx-auto;
+  }
 }

@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260701-23-dcbed8c"}');</script><script src="/_sdk/f432b76fb310b513.telemetry_sdk.js" integrity="sha512-9FJQ55EKmmqhyyik8BhrMVfm0+iYYfb8uOlRsjtkxJMEI97qOVEI4PnHohDjQAtvAep0IOEpdQ64eki0sz62ug=="></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logos Recruiting</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:wght@600;700;800;900&amp;display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+    <style>
+        body { font-family: 'DM Sans', sans-serif; }
+        .font-display { font-family: 'Fraunces', serif; }
+        .animate-in { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+        .animate-in.visible { opacity: 1; transform: translateY(0); }
+        .btn-primary { transition: all 0.2s; position: relative; overflow: hidden; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(15, 23, 42, 0.25); }
+        .card-hover { transition: all 0.3s; }
+        .card-hover:hover { transform: translateY(-6px); box-shadow: 0 25px 60px rgba(0,0,0,0.12); }
+        .gradient-border { background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899); padding: 3px; border-radius: 1.25rem; }
+        .gradient-border-inner { background: #fff; border-radius: calc(1.25rem - 3px); }
+        .pain-card { transition: all 0.3s; border-left: 4px solid transparent; }
+        .pain-card:hover { border-left-color: #ef4444; transform: translateX(4px); background: #fff; }
+        .benefit-card { border-left: 3px solid; transition: all 0.3s; }
+        .benefit-card:hover { transform: translateX(4px); }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .marquee-track { animation: marquee 18s linear infinite; }
+        @keyframes pulse-glow { 0%,100% { box-shadow: 0 0 20px rgba(59,130,246,0.4); } 50% { box-shadow: 0 0 40px rgba(59,130,246,0.7); } }
+        .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+        .star { color: #f59e0b; }
+        .urgency-bar { background: linear-gradient(90deg, #dc2626, #ea580c); }
+        .timeline-line { position: absolute; top: 50%; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899); z-index: 0; }
+        @media (max-width: 640px) { .timeline-line { display: none; } }
+        .ribbon { position: absolute; top: 16px; right: -35px; background: #ef4444; color: white; padding: 4px 40px; font-size: 11px; font-weight: 700; transform: rotate(45deg); text-transform: uppercase; letter-spacing: 0.5px; }
+        .hero-overlay { position: relative; }
+        .hero-overlay::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(250,249,247,0.92) 0%, rgba(255,255,255,0.85) 50%, rgba(240,249,255,0.88) 100%); z-index: 1; }
+        .cta-overlay { position: relative; }
+        .cta-overlay::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,23,42,0.88) 0%, rgba(30,41,59,0.92) 100%); z-index: 1; }
+    </style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { cream: '#FAF9F7', navy: '#0f172a' } } } }
+    </script>
+    <script src="/_sdk/0179d719c431a79e.data_sdk.js" integrity="sha512-OsRvJkI5GkC3MJQcgotQYotpzrMSX415GiKKgvYdxQEEkzD/fdchShO2FMSy0PJr/tiINMXOk5Vl2zAgg6bUiA=="></script>
+    <script src="/_sdk/0b3af1c300e720aa.resizing_sdk.js" type="text/javascript" integrity="sha512-nX1P6oXZmEY5wCI2lUVg3BwKu1cr0yi+ZpXgZ0Yn90vkSwvpmyzBMvOyD6VLJUtBwFI2dSrw1b6OvORxSggw3w=="></script>
+</head>
+<body data-template-id="__page-root" class="w-full overflow-x-hidden" style="background: rgb(250, 249, 247);"><!-- Urgency Top Bar -->
+<div class="urgency-bar w-full py-2.5 px-4 text-center">
+    <p data-template-id="urgency-bar-text" class="canva-text text-sm font-semibold" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">🔥 Only 5 Strategy Call Spots Left This Week — Book Yours Now</p>
+</div><!-- Nav -->
+<header class="w-full px-6 py-5 sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-100">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between"><span data-template-id="logo" class="canva-text font-display text-2xl font-bold tracking-tight" style="color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 16px;">Logos</span>
+        <div class="flex items-center gap-3"><span class="hidden sm:inline text-sm font-medium text-slate-600"><i data-lucide="phone" class="w-4 h-4 inline mr-1"></i> Free Strategy Call</span> <button data-template-id="nav-cta" class="canva-button btn-primary px-6 py-2.5 rounded-full text-sm font-bold" onclick="document.getElementById('contact-form').scrollIntoView({behavior:'smooth'})" style="background: rgb(15, 23, 42); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Book Free Call →</button>
+        </div>
+    </nav>
+</header>
+<main><!-- Hero with background image -->
+    <section class="w-full hero-overlay overflow-hidden"><img data-template-id="hero-bg-image" class="canva-image absolute inset-0 w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/7974/pexels-photo.jpg?auto=compress&amp;cs=tinysrgb&amp;w=1280" alt="Minimalist home office desk with laptop, smartphone, and plant for a modern work environment.">
+        <div class="relative z-10 px-6 pt-20 pb-28">
+            <div class="max-w-4xl mx-auto text-center animate-in">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-100 border border-red-300 mb-8"><span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span> <span data-template-id="hero-badge" class="canva-text text-sm font-semibold" style="color: rgb(220, 38, 38); font-weight: 600; font-style: normal; font-size: 16px;">⚡ Only 5 Spots Left This Week</span>
+                </div>
+                <h1 data-template-id="hero-headline" class="canva-text font-display text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] mb-6 text-slate-900" style="color: rgb(15, 23, 42); font-weight: 900; font-style: normal; font-size: 32px;">Stop Doing Everything.
+                    Start Being The CEO Again.</h1>
+                <p data-template-id="hero-sub" class="canva-text text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed text-slate-700" style="color: rgb(71, 85, 105); font-weight: 400; font-style: normal; font-size: 16px;">We place pre-vetted sales reps, marketers, and executive assistants who hit the ground running — so you can finally focus on growth, not grunt work.</p>
+                <div class="flex flex-wrap justify-center gap-3 mb-10"><span data-template-id="trust-1" class="canva-tag px-4 py-2 rounded-full text-sm font-medium" style="background: rgb(224, 242, 254); color: rgb(12, 74, 110); font-weight: 400; font-style: normal; font-size: 16px;">✓ Pay Only When You Hire</span> <span data-template-id="trust-2" class="canva-tag px-4 py-2 rounded-full text-sm font-medium" style="background: rgb(224, 242, 254); color: rgb(12, 74, 110); font-weight: 400; font-style: normal; font-size: 16px;">✓ Replacement Guarantees</span> <span data-template-id="trust-3" class="canva-tag px-4 py-2 rounded-full text-sm font-medium" style="background: rgb(224, 242, 254); color: rgb(12, 74, 110); font-weight: 400; font-style: normal; font-size: 16px;">✓ Pre-Vetted Professionals</span> <span data-template-id="trust-4" class="canva-tag px-4 py-2 rounded-full text-sm font-medium" style="background: rgb(224, 242, 254); color: rgb(12, 74, 110); font-weight: 400; font-style: normal; font-size: 16px;">✓ Results in Week One</span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center"><button data-template-id="hero-cta" class="canva-button btn-primary px-10 py-5 rounded-full text-lg font-bold shadow-2xl shadow-blue-500/30 pulse-glow" onclick="document.getElementById('contact-form').scrollIntoView({behavior:'smooth'})" style="background: rgb(59, 130, 246); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Get My Free Growth Blueprint →</button> <button data-template-id="hero-cta2" class="canva-button px-8 py-5 rounded-full text-lg font-semibold border-2 border-slate-300 text-slate-900 hover:bg-slate-100 transition" onclick="document.getElementById('how-it-works').scrollIntoView({behavior:'smooth'})" style="background: transparent; color: rgb(15, 23, 42); font-weight: 400; font-style: normal; font-size: 16px;">See How It Works</button>
+                </div>
+                <p data-template-id="hero-microcopy" class="canva-text text-sm mt-5 text-slate-600" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 16px;">Free 30-min call. Zero obligation. Walk away with a custom hiring plan.</p>
+            </div>
+        </div>
+    </section><!-- Marquee -->
+    <div class="w-full overflow-hidden py-4 bg-slate-900 border-y border-slate-700">
+        <div class="flex whitespace-nowrap marquee-track"><span class="mx-8 text-sm font-bold text-emerald-400">🚀 500+ Placements</span> <span class="mx-8 text-sm font-bold text-blue-400">⚡ 20+ Hours Saved Weekly</span> <span class="mx-8 text-sm font-bold text-amber-400">💰 40-70% Cost Savings</span> <span class="mx-8 text-sm font-bold text-purple-400">🌍 30+ Countries</span> <span class="mx-8 text-sm font-bold text-pink-400">❤️ 95% Client Satisfaction</span> <span class="mx-8 text-sm font-bold text-emerald-400">🚀 500+ Placements</span> <span class="mx-8 text-sm font-bold text-blue-400">⚡ 20+ Hours Saved Weekly</span> <span class="mx-8 text-sm font-bold text-amber-400">💰 40-70% Cost Savings</span> <span class="mx-8 text-sm font-bold text-purple-400">🌍 30+ Countries</span> <span class="mx-8 text-sm font-bold text-pink-400">❤️ 95% Client Satisfaction</span>
+        </div>
+    </div><!-- Pain Points with image -->
+    <section class="w-full px-6 py-24 relative" data-template-id="pain-section" style="background: rgb(245, 243, 239);">
+        <div class="max-w-5xl mx-auto animate-in relative z-10">
+            <div class="text-center mb-14">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-50 border border-red-200 mb-6"><i data-lucide="alert-triangle" class="w-4 h-4 text-red-500"></i> <span class="text-sm font-bold text-red-600">WARNING: The Founder's Trap</span>
+                </div>
+                <h2 data-template-id="pain-headline" class="canva-text font-display text-3xl md:text-5xl font-bold mb-4" style="color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 24px;">You're Wearing 6 Hats. That's Why Growth Stalled.</h2>
+                <p data-template-id="pain-supporting" class="canva-text text-lg max-w-xl mx-auto" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Every hour you spend on tasks below your pay grade is an hour your competitors use to pull ahead.</p>
+            </div>
+            <div class="grid md:grid-cols-5 gap-8 items-center">
+                <div class="md:col-span-2 rounded-2xl overflow-hidden shadow-2xl shadow-red-200/40"><img data-template-id="pain-image" class="canva-image w-full h-64 md:h-80 object-cover" loading="lazy" src="https://images.pexels.com/photos/3771115/pexels-photo-3771115.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Overwhelmed entrepreneur suffering from stress and exhaustion">
+                </div>
+                <div class="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div data-template-id="pain-1" class="canva-card pain-card p-5 rounded-xl border bg-white/80 backdrop-blur flex items-center gap-4" style="background: rgb(255, 255, 255);">
+                        <div class="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="briefcase" class="w-5 h-5 text-red-400"></i>
+                        </div><span data-template-id="pain-1-text" class="canva-text font-medium" style="color: rgb(26, 26, 46); font-weight: 400; font-style: normal; font-size: 16px;">You're the CEO AND the closer</span>
+                    </div>
+                    <div data-template-id="pain-2" class="canva-card pain-card p-5 rounded-xl border bg-white/80 backdrop-blur flex items-center gap-4" style="background: rgb(255, 255, 255);">
+                        <div class="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="phone-call" class="w-5 h-5 text-red-400"></i>
+                        </div><span data-template-id="pain-2-text" class="canva-text font-medium" style="color: rgb(26, 26, 46); font-weight: 400; font-style: normal; font-size: 16px;">You're running ads at midnight</span>
+                    </div>
+                    <div data-template-id="pain-3" class="canva-card pain-card p-5 rounded-xl border bg-white/80 backdrop-blur flex items-center gap-4" style="background: rgb(255, 255, 255);">
+                        <div class="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="target" class="w-5 h-5 text-red-400"></i>
+                        </div><span data-template-id="pain-3-text" class="canva-text font-medium" style="color: rgb(26, 26, 46); font-weight: 400; font-style: normal; font-size: 16px;">Leads slip through the cracks</span>
+                    </div>
+                    <div data-template-id="pain-4" class="canva-card pain-card p-5 rounded-xl border bg-white/80 backdrop-blur flex items-center gap-4" style="background: rgb(255, 255, 255);">
+                        <div class="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="inbox" class="w-5 h-5 text-red-400"></i>
+                        </div><span data-template-id="pain-4-text" class="canva-text font-medium" style="color: rgb(26, 26, 46); font-weight: 400; font-style: normal; font-size: 16px;">Inbox chaos, calendar mayhem</span>
+                    </div>
+                    <div data-template-id="pain-5" class="canva-card pain-card p-5 rounded-xl border bg-white/80 backdrop-blur flex items-center gap-4" style="background: rgb(255, 255, 255);">
+                        <div class="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="headphones" class="w-5 h-5 text-red-400"></i>
+                        </div><span data-template-id="pain-5-text" class="canva-text font-medium" style="color: rgb(26, 26, 46); font-weight: 400; font-style: normal; font-size: 16px;">Support tickets eat your mornings</span>
+                    </div>
+                    <div data-template-id="pain-6" class="canva-card pain-card p-5 rounded-xl border bg-white/80 backdrop-blur flex items-center gap-4" style="background: rgb(255, 255, 255);">
+                        <div class="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="settings" class="w-5 h-5 text-red-400"></i>
+                        </div><span data-template-id="pain-6-text" class="canva-text font-medium" style="color: rgb(26, 26, 46); font-weight: 400; font-style: normal; font-size: 16px;">No time for strategy or vision</span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <p data-template-id="pain-cta-text" class="canva-text text-lg font-semibold mb-4" style="color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 16px;">Sound familiar? Let's fix it this week.</p><button data-template-id="pain-cta" class="canva-button btn-primary px-8 py-4 rounded-full font-bold text-lg" onclick="document.getElementById('contact-form').scrollIntoView({behavior:'smooth'})" style="background: rgb(15, 23, 42); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Claim My Free Strategy Call →</button>
+            </div>
+        </div>
+    </section><!-- Comparison with image -->
+    <section class="w-full px-6 py-24 relative" data-template-id="compare-section" style="background: rgb(255, 255, 255);">
+        <div class="max-w-5xl mx-auto animate-in relative z-10">
+            <div class="text-center mb-14">
+                <h2 data-template-id="compare-headline" class="canva-text font-display text-3xl md:text-5xl font-bold max-w-3xl mx-auto" style="color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 24px;">The Difference Between Stuck Founders and Scaling CEOs? A Team.</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div data-template-id="compare-left" class="canva-card p-8 rounded-2xl border-2 border-slate-200 relative overflow-hidden" style="background: rgb(250, 250, 250);">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center">
+                            <i data-lucide="frown" class="w-5 h-5 text-slate-500"></i>
+                        </div>
+                        <h3 data-template-id="compare-left-title" class="canva-text font-semibold text-xl" style="color: rgb(107, 114, 128); font-weight: 600; font-style: normal; font-size: 19px;">Stuck founders</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <p data-template-id="cl-1" class="canva-text flex items-center gap-3 p-3 rounded-lg bg-red-50/60" style="color: rgb(55, 65, 81); font-weight: 400; font-style: normal; font-size: 16px;">Working more hours for less growth</p>
+                        <p data-template-id="cl-2" class="canva-text flex items-center gap-3 p-3 rounded-lg bg-red-50/60" style="color: rgb(55, 65, 81); font-weight: 400; font-style: normal; font-size: 16px;">Burning out on $15/hr tasks</p>
+                        <p data-template-id="cl-3" class="canva-text flex items-center gap-3 p-3 rounded-lg bg-red-50/60" style="color: rgb(55, 65, 81); font-weight: 400; font-style: normal; font-size: 16px;">Buying more tools instead of hiring</p>
+                        <p data-template-id="cl-4" class="canva-text flex items-center gap-3 p-3 rounded-lg bg-red-50/60" style="color: rgb(55, 65, 81); font-weight: 400; font-style: normal; font-size: 16px;">Revenue plateaus month after month</p>
+                    </div>
+                </div>
+                <div class="gradient-border">
+                    <div data-template-id="compare-right" class="canva-card p-8 rounded-2xl gradient-border-inner relative overflow-hidden" style="background: rgb(255, 255, 255);">
+                        <div class="ribbon">
+                            Popular
+                        </div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center">
+                                <i data-lucide="rocket" class="w-5 h-5 text-emerald-600"></i>
+                            </div>
+                            <h3 data-template-id="compare-right-title" class="canva-text font-semibold text-xl" style="color: rgb(6, 95, 70); font-weight: 600; font-style: normal; font-size: 19px;">Scaling CEOs</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <p data-template-id="cr-1" class="canva-text flex items-center gap-3 p-3 rounded-lg bg-emerald-50/80" style="color: rgb(6, 95, 70); font-weight: 400; font-style: normal; font-size: 16px;">Sales pipeline runs on autopilot</p>
+                            <p data-template-id="cr-2" class="canva-text flex items-center gap-3 p-3 rounded-lg bg-emerald-50/80" style="color: rgb(6, 95, 70); font-weight: 400; font-style: normal; font-size: 16px;">Marketing drives leads 24/7</p>
+                            <p data-template-id="cr-3" class="canva-text flex items-center gap-3 p-3 rounded-lg bg-emerald-50/80" style="color: rgb(6, 95, 70); font-weight: 400; font-style: normal; font-size: 16px;">Operations handled by an expert EA</p>
+                            <p data-template-id="cr-4" class="canva-text flex items-center gap-3 p-3 rounded-lg bg-emerald-50/80" style="color: rgb(6, 95, 70); font-weight: 400; font-style: normal; font-size: 16px;">Founder focuses purely on growth</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Compare image -->
+            <div class="mt-10 rounded-2xl overflow-hidden shadow-xl"><img data-template-id="compare-image" class="canva-image w-full h-56 object-cover" loading="lazy" src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Diverse professionals unite for teamwork around a wooden table with laptops and documents.">
+            </div>
+        </div>
+    </section><!-- Growth Team -->
+    <section class="w-full px-6 py-24 relative" data-template-id="team-section" style="background: rgb(250, 249, 247);">
+        <div class="max-w-5xl mx-auto animate-in relative z-10">
+            <div class="text-center mb-14">
+                <h2 data-template-id="team-headline" class="canva-text font-display text-3xl md:text-5xl font-bold mb-4" style="color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 24px;">The 3 Hires That Change Everything</h2>
+                <p data-template-id="team-sub" class="canva-text text-lg max-w-2xl mx-auto" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 16px;">These are the roles that transform overwhelmed operators into scaling CEOs. We find them for you.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div data-template-id="team-card-1" class="canva-card card-hover p-8 rounded-2xl border text-center relative overflow-hidden" style="background: rgb(255, 255, 255);">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center mx-auto mb-6 shadow-sm">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h3 data-template-id="team-card-1-title" class="canva-text font-semibold text-xl mb-3" style="color: rgb(15, 23, 42); font-weight: 600; font-style: normal; font-size: 19px;">Sales Professional</h3>
+                    <p data-template-id="team-card-1-desc" class="canva-text leading-relaxed" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Builds pipeline, books meetings, closes deals. You focus on strategy while revenue grows.</p>
+                </div>
+                <div data-template-id="team-card-2" class="canva-card card-hover p-8 rounded-2xl border text-center relative overflow-hidden" style="background: rgb(255, 255, 255);">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-100 to-purple-50 flex items-center justify-center mx-auto mb-6 shadow-sm">
+                        <i data-lucide="megaphone" class="w-8 h-8 text-purple-600"></i>
+                    </div>
+                    <h3 data-template-id="team-card-2-title" class="canva-text font-semibold text-xl mb-3" style="color: rgb(15, 23, 42); font-weight: 600; font-style: normal; font-size: 19px;">Marketing Specialist</h3>
+                    <p data-template-id="team-card-2-desc" class="canva-text leading-relaxed" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Creates content, runs campaigns, generates leads on autopilot. No more midnight ad sessions.</p>
+                </div>
+                <div data-template-id="team-card-3" class="canva-card card-hover p-8 rounded-2xl border text-center relative overflow-hidden" style="background: rgb(255, 255, 255);">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-amber-500 to-orange-500"></div>
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-100 to-amber-50 flex items-center justify-center mx-auto mb-6 shadow-sm">
+                        <i data-lucide="calendar-check" class="w-8 h-8 text-amber-600"></i>
+                    </div>
+                    <h3 data-template-id="team-card-3-title" class="canva-text font-semibold text-xl mb-3" style="color: rgb(15, 23, 42); font-weight: 600; font-style: normal; font-size: 19px;">Executive Assistant</h3>
+                    <p data-template-id="team-card-3-desc" class="canva-text leading-relaxed" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Manages calendar, inbox, and operations. You stay in your zone of genius.</p>
+                </div>
+            </div>
+        </div>
+    </section><!-- Benefits -->
+    <section class="w-full px-6 py-24 relative" data-template-id="benefits-section" style="background: rgb(255, 255, 255);">
+        <div class="max-w-4xl mx-auto animate-in relative z-10">
+            <div class="text-center mb-14">
+                <h2 data-template-id="benefits-headline" class="canva-text font-display text-3xl md:text-5xl font-bold" style="color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 24px;">Why 500+ Founders Chose Logos</h2>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+                <div class="benefit-card border-blue-500 flex items-center gap-4 p-5 bg-white rounded-xl border border-slate-100 shadow-sm">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="dollar-sign" class="w-5 h-5 text-blue-600"></i>
+                    </div><span data-template-id="ben-1" class="canva-text font-medium" style="color: rgb(26, 26, 46); font-weight: 400; font-style: normal; font-size: 16px;">Zero risk — pay only when you hire</span>
+                </div>
+                <div class="benefit-card border-purple-500 flex items-center gap-4 p-5 bg-white rounded-xl border border-slate-100 shadow-sm">
+                    <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="refresh-cw" class="w-5 h-5 text-purple-600"></i>
+                    </div><span data-template-id="ben-2" class="canva-text font-medium" style="color: rgb(26, 26, 46); font-weight: 400; font-style: normal; font-size: 16px;">Free replacement guarantees</span>
+                </div>
+                <div class="benefit-card border-emerald-500 flex items-center gap-4 p-5 bg-white rounded-xl border border-slate-100 shadow-sm">
+                    <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="piggy-bank" class="w-5 h-5 text-emerald-600"></i>
+                    </div><span data-template-id="ben-3" class="canva-text font-medium" style="color: rgb(26, 26, 46); font-weight: 400; font-style: normal; font-size: 16px;">Save 40-70% vs local hires</span>
+                </div>
+                <div class="benefit-card border-amber-500 flex items-center gap-4 p-5 bg-white rounded-xl border border-slate-100 shadow-sm">
+                    <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="award" class="w-5 h-5 text-amber-600"></i>
+                    </div><span data-template-id="ben-4" class="canva-text font-medium" style="color: rgb(26, 26, 46); font-weight: 400; font-style: normal; font-size: 16px;">Only top 3% of candidates</span>
+                </div>
+                <div class="benefit-card border-rose-500 flex items-center gap-4 p-5 bg-white rounded-xl border border-slate-100 shadow-sm">
+                    <div class="w-10 h-10 rounded-full bg-rose-100 flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="zap" class="w-5 h-5 text-rose-600"></i>
+                    </div><span data-template-id="ben-5" class="canva-text font-medium" style="color: rgb(26, 26, 46); font-weight: 400; font-style: normal; font-size: 16px;">Placed &amp; producing in 2 weeks</span>
+                </div>
+                <div class="benefit-card border-indigo-500 flex items-center gap-4 p-5 bg-white rounded-xl border border-slate-100 shadow-sm">
+                    <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="shield" class="w-5 h-5 text-indigo-600"></i>
+                    </div><span data-template-id="ben-6" class="canva-text font-medium" style="color: rgb(26, 26, 46); font-weight: 400; font-style: normal; font-size: 16px;">Full compliance handled for you</span>
+                </div>
+            </div>
+        </div>
+    </section><!-- How It Works -->
+    <section id="how-it-works" class="w-full px-6 py-24" data-template-id="steps-section" style="background: rgb(245, 243, 239);">
+        <div class="max-w-5xl mx-auto animate-in">
+            <div class="text-center mb-14">
+                <h2 data-template-id="steps-headline" class="canva-text font-display text-3xl md:text-5xl font-bold" style="color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 24px;">Your Team in 4 Simple Steps</h2>
+            </div>
+            <div class="relative">
+                <div class="timeline-line hidden sm:block"></div>
+                <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
+                    <div data-template-id="step-1" class="canva-card p-6 rounded-2xl border text-center bg-white shadow-sm card-hover" style="background: rgb(255, 255, 255);">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 text-white flex items-center justify-center mx-auto mb-4 font-bold text-xl shadow-lg shadow-blue-200">
+                            1
+                        </div>
+                        <h3 data-template-id="step-1-title" class="canva-text font-semibold mb-2" style="color: rgb(15, 23, 42); font-weight: 600; font-style: normal; font-size: 19px;">Free Strategy Call</h3>
+                        <p data-template-id="step-1-desc" class="canva-text text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">We learn your business, bottlenecks, and growth goals in 30 minutes.</p>
+                    </div>
+                    <div data-template-id="step-2" class="canva-card p-6 rounded-2xl border text-center bg-white shadow-sm card-hover" style="background: rgb(255, 255, 255);">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-purple-500 to-purple-700 text-white flex items-center justify-center mx-auto mb-4 font-bold text-xl shadow-lg shadow-purple-200">
+                            2
+                        </div>
+                        <h3 data-template-id="step-2-title" class="canva-text font-semibold mb-2" style="color: rgb(15, 23, 42); font-weight: 600; font-style: normal; font-size: 19px;">We Source Talent</h3>
+                        <p data-template-id="step-2-desc" class="canva-text text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Our team vets candidates from 30+ countries. You only see the best.</p>
+                    </div>
+                    <div data-template-id="step-3" class="canva-card p-6 rounded-2xl border text-center bg-white shadow-sm card-hover" style="background: rgb(255, 255, 255);">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-700 text-white flex items-center justify-center mx-auto mb-4 font-bold text-xl shadow-lg shadow-emerald-200">
+                            3
+                        </div>
+                        <h3 data-template-id="step-3-title" class="canva-text font-semibold mb-2" style="color: rgb(15, 23, 42); font-weight: 600; font-style: normal; font-size: 19px;">You Interview</h3>
+                        <p data-template-id="step-3-desc" class="canva-text text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Meet pre-screened professionals ready to hit the ground running.</p>
+                    </div>
+                    <div data-template-id="step-4" class="canva-card p-6 rounded-2xl border text-center bg-white shadow-sm card-hover" style="background: rgb(255, 255, 255);">
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-amber-500 to-amber-700 text-white flex items-center justify-center mx-auto mb-4 font-bold text-xl shadow-lg shadow-amber-200">
+                            4
+                        </div>
+                        <h3 data-template-id="step-4-title" class="canva-text font-semibold mb-2" style="color: rgb(15, 23, 42); font-weight: 600; font-style: normal; font-size: 19px;">Growth Starts</h3>
+                        <p data-template-id="step-4-desc" class="canva-text text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Your new hire delivers results from week one. We support the transition.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Stats with visual -->
+    <section class="w-full px-6 py-24 relative" data-template-id="stats-bg" style="background: rgb(255, 255, 255);">
+        <div class="max-w-5xl mx-auto animate-in">
+            <h2 data-template-id="stats-headline" class="canva-text font-display text-3xl md:text-5xl font-bold text-center mb-14" style="color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 24px;">The Numbers Don't Lie</h2>
+            <div class="grid md:grid-cols-5 gap-8 items-center">
+                <div class="md:col-span-2 rounded-2xl overflow-hidden shadow-xl"><img data-template-id="stats-image" class="canva-image w-full h-64 object-cover" loading="lazy" src="https://images.pexels.com/photos/9822733/pexels-photo-9822733.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Wooden blocks forming a staircase with an upward arrow symbolizing growth and progress.">
+                </div>
+                <div class="md:col-span-3 grid grid-cols-2 gap-6">
+                    <div data-template-id="stat-1" class="canva-card p-6 rounded-2xl text-center card-hover border" style="background: rgb(255, 255, 255);">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-3">
+                            <i data-lucide="clock" class="w-5 h-5 text-blue-600"></i>
+                        </div>
+                        <p class="font-display text-4xl font-bold mb-2" data-counter="20" data-suffix="+">0</p>
+                        <p data-template-id="stat-1-label" class="canva-text text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Hours Saved Per Week</p>
+                    </div>
+                    <div data-template-id="stat-2" class="canva-card p-6 rounded-2xl text-center card-hover border" style="background: rgb(255, 255, 255);">
+                        <div class="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-3">
+                            <i data-lucide="piggy-bank" class="w-5 h-5 text-emerald-600"></i>
+                        </div>
+                        <p class="font-display text-4xl font-bold mb-2" data-counter="70" data-prefix="40-" data-suffix="%">0</p>
+                        <p data-template-id="stat-2-label" class="canva-text text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Lower Hiring Costs</p>
+                    </div>
+                    <div data-template-id="stat-3" class="canva-card p-6 rounded-2xl text-center card-hover border" style="background: rgb(255, 255, 255);">
+                        <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mx-auto mb-3">
+                            <i data-lucide="heart" class="w-5 h-5 text-purple-600"></i>
+                        </div>
+                        <p class="font-display text-4xl font-bold mb-2" data-counter="95" data-suffix="%">0</p>
+                        <p data-template-id="stat-3-label" class="canva-text text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Client Satisfaction</p>
+                    </div>
+                    <div data-template-id="stat-4" class="canva-card p-6 rounded-2xl text-center card-hover border" style="background: rgb(255, 255, 255);">
+                        <div class="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mx-auto mb-3">
+                            <i data-lucide="users" class="w-5 h-5 text-amber-600"></i>
+                        </div>
+                        <p class="font-display text-4xl font-bold mb-2" data-counter="500" data-suffix="+">0</p>
+                        <p data-template-id="stat-4-label" class="canva-text text-sm" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">Successful Placements</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Testimonials -->
+    <section class="w-full px-6 py-24" data-template-id="testimonial-section" style="background: rgb(250, 249, 247);">
+        <div class="max-w-5xl mx-auto animate-in">
+            <h2 data-template-id="testimonial-headline" class="canva-text font-display text-3xl md:text-5xl font-bold text-center mb-14" style="color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 24px;">Founders Who Stopped Grinding &amp; Started Growing</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div data-template-id="test-1" class="canva-card p-8 rounded-2xl border relative" style="background: rgb(255, 255, 255);">
+                    <div class="flex gap-1 mb-4 star">
+                        ★★★★★
+                    </div>
+                    <p data-template-id="test-1-quote" class="canva-text italic mb-6 leading-relaxed" style="color: rgb(55, 65, 81); font-weight: 400; font-style: normal; font-size: 16px;">I went from 70-hour weeks to focusing on strategy. Logos found me a sales rep who outperformed my own efforts in month one. Revenue up 40%.</p>
+                    <div class="flex items-center gap-3"><img data-template-id="test-1-avatar" class="canva-image w-12 h-12 rounded-full object-cover ring-2 ring-blue-200" loading="lazy" src="https://images.pexels.com/photos/10955559/pexels-photo-10955559.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400" alt="Portrait of a smiling man in a white dress shirt outdoors">
+                        <div>
+                            <p data-template-id="test-1-name" class="canva-text font-semibold text-sm" style="color: rgb(15, 23, 42); font-weight: 600; font-style: normal; font-size: 16px;">Marcus Chen</p>
+                            <p data-template-id="test-1-role" class="canva-text text-xs" style="color: rgb(107, 114, 128); font-weight: 400; font-style: normal; font-size: 16px;">Founder, GrowthStack Agency</p>
+                        </div>
+                    </div>
+                </div>
+                <div data-template-id="test-2" class="canva-card p-8 rounded-2xl border relative" style="background: rgb(255, 255, 255);">
+                    <div class="flex gap-1 mb-4 star">
+                        ★★★★★
+                    </div>
+                    <p data-template-id="test-2-quote" class="canva-text italic mb-6 leading-relaxed" style="color: rgb(55, 65, 81); font-weight: 400; font-style: normal; font-size: 16px;">I was skeptical about remote hiring. My EA now runs half my business and I finally take weekends off. Best investment I've made.</p>
+                    <div class="flex items-center gap-3"><img data-template-id="test-2-avatar" class="canva-image w-12 h-12 rounded-full object-cover ring-2 ring-purple-200" loading="lazy" src="https://images.pexels.com/photos/27086916/pexels-photo-27086916.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400" alt="Professional woman in a business suit smiling warmly indoors">
+                        <div>
+                            <p data-template-id="test-2-name" class="canva-text font-semibold text-sm" style="color: rgb(15, 23, 42); font-weight: 600; font-style: normal; font-size: 16px;">Sarah Mitchell</p>
+                            <p data-template-id="test-2-role" class="canva-text text-xs" style="color: rgb(107, 114, 128); font-weight: 400; font-style: normal; font-size: 16px;">CEO, Mitchell Consulting</p>
+                        </div>
+                    </div>
+                </div>
+                <div data-template-id="test-3" class="canva-card p-8 rounded-2xl border relative" style="background: rgb(255, 255, 255);">
+                    <div class="flex gap-1 mb-4 star">
+                        ★★★★★
+                    </div>
+                    <p data-template-id="test-3-quote" class="canva-text italic mb-6 leading-relaxed" style="color: rgb(55, 65, 81); font-weight: 400; font-style: normal; font-size: 16px;">We 3x'd our lead gen in 60 days after Logos placed a marketing specialist. ROI was immediate. Wish I'd done it sooner.</p>
+                    <div class="flex items-center gap-3"><img data-template-id="test-3-avatar" class="canva-image w-12 h-12 rounded-full object-cover ring-2 ring-amber-200" loading="lazy" src="https://images.pexels.com/photos/18032391/pexels-photo-18032391.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=400" alt="Portrait of a smiling young man with dark hair and beard in a blue shirt">
+                        <div>
+                            <p data-template-id="test-3-name" class="canva-text font-semibold text-sm" style="color: rgb(15, 23, 42); font-weight: 600; font-style: normal; font-size: 16px;">David Park</p>
+                            <p data-template-id="test-3-role" class="canva-text text-xs" style="color: rgb(107, 114, 128); font-weight: 400; font-style: normal; font-size: 16px;">Founder, Elevate Digital</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Contact Form -->
+    <section id="contact-form" class="w-full px-6 py-24 relative" data-template-id="form-section" style="background: rgb(255, 255, 255);">
+        <div class="max-w-5xl mx-auto animate-in relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200 mb-6"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> <span class="text-sm font-bold text-emerald-700">Limited Spots This Month</span>
+                    </div>
+                    <h2 data-template-id="form-headline" class="canva-text font-display text-3xl md:text-4xl font-bold mb-4" style="color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 24px;">Get Your Free Growth Blueprint (Worth $500)</h2>
+                    <p data-template-id="form-sub" class="canva-text text-lg mb-8" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">In 30 minutes we'll map your biggest bottleneck and show you exactly who to hire first — free, zero obligation.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                            </div><span data-template-id="form-benefit-1" class="canva-text font-medium" style="color: rgb(26, 26, 46); font-weight: 400; font-style: normal; font-size: 16px;">Custom hiring roadmap for your business</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                            </div><span data-template-id="form-benefit-2" class="canva-text font-medium" style="color: rgb(26, 26, 46); font-weight: 400; font-style: normal; font-size: 16px;">Salary benchmarks for your roles</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center">
+                                <i data-lucide="check" class="w-4 h-4 text-emerald-600"></i>
+                            </div><span data-template-id="form-benefit-3" class="canva-text font-medium" style="color: rgb(26, 26, 46); font-weight: 400; font-style: normal; font-size: 16px;">Walk away with a plan even if you don't hire us</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl border-2 border-slate-200 p-8 shadow-2xl shadow-slate-200/50">
+                    <form id="lead-form" class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div><label data-template-id="label-fname" class="canva-text text-sm font-medium mb-1 block" for="fname" style="color: rgb(55, 65, 81); font-weight: 500; font-style: normal; font-size: 16px;">First Name</label> <input id="fname" type="text" required="" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-200 focus:border-blue-400 outline-none transition">
+                            </div>
+                            <div><label data-template-id="label-lname" class="canva-text text-sm font-medium mb-1 block" for="lname" style="color: rgb(55, 65, 81); font-weight: 500; font-style: normal; font-size: 16px;">Last Name</label> <input id="lname" type="text" required="" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-200 focus:border-blue-400 outline-none transition">
+                            </div>
+                        </div>
+                        <div><label data-template-id="label-phone" class="canva-text text-sm font-medium mb-1 block" for="phone" style="color: rgb(55, 65, 81); font-weight: 500; font-style: normal; font-size: 16px;">Phone Number</label> <input id="phone" type="tel" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-200 focus:border-blue-400 outline-none transition">
+                        </div>
+                        <div><label data-template-id="label-email" class="canva-text text-sm font-medium mb-1 block" for="email" style="color: rgb(55, 65, 81); font-weight: 500; font-style: normal; font-size: 16px;">Work Email</label> <input id="email" type="email" required="" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-200 focus:border-blue-400 outline-none transition">
+                        </div>
+                        <div><label data-template-id="label-company" class="canva-text text-sm font-medium mb-1 block" for="company-size" style="color: rgb(55, 65, 81); font-weight: 500; font-style: normal; font-size: 16px;">Company Size</label> <select id="company-size" required="" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-200 focus:border-blue-400 outline-none transition bg-white"> <option value="">Select company size</option> <option value="1-5">1-5 employees</option> <option value="6-20">6-20 employees</option> <option value="21-50">21-50 employees</option> <option value="51-200">51-200 employees</option> <option value="200+">200+ employees</option> </select>
+                        </div>
+                        <div><label data-template-id="label-message" class="canva-text text-sm font-medium mb-1 block" for="message" style="color: rgb(55, 65, 81); font-weight: 500; font-style: normal; font-size: 16px;">What's your biggest bottleneck?</label> <textarea id="message" rows="3" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-200 focus:border-blue-400 outline-none transition resize-none"></textarea>
+                        </div><button data-template-id="form-submit" type="submit" class="canva-button btn-primary w-full py-4 rounded-xl font-bold text-lg" style="background: rgb(15, 23, 42); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Get My Free Growth Blueprint →</button>
+                        <p data-template-id="form-disclaimer" class="canva-text text-xs text-center" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">🔒 Your info is safe. No spam, ever. Unsubscribe anytime.</p>
+                    </form>
+                    <div id="form-success" class="hidden text-center py-12">
+                        <div class="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="check-circle" class="w-8 h-8 text-emerald-600"></i>
+                        </div>
+                        <p data-template-id="form-success-text" class="canva-text font-display text-xl font-bold mb-2" style="color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 16px;">You're In! 🎉</p>
+                        <p data-template-id="form-success-sub" class="canva-text" style="color: rgb(75, 85, 99); font-weight: 400; font-style: normal; font-size: 16px;">We'll reach out within 24 hours with your custom growth blueprint.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Final CTA with background image -->
+    <section class="w-full px-6 py-28 relative overflow-hidden cta-overlay" data-template-id="final-cta-section" style="background: rgb(15, 23, 42);"><img data-template-id="cta-bg-image" class="canva-image absolute inset-0 w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/1519088/pexels-photo-1519088.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1920" alt="Stunning night view of Toronto skyline reflecting on water with CN Tower prominent.">
+        <div class="relative z-10 max-w-3xl mx-auto text-center animate-in">
+            <h2 data-template-id="final-headline" class="canva-text font-display text-3xl md:text-5xl font-bold mb-6" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Every Week You Wait Is Revenue Left on the Table</h2>
+            <p data-template-id="final-sub1" class="canva-text text-xl mb-2" style="color: rgb(203, 213, 225); font-weight: 400; font-style: normal; font-size: 16px;">The fastest-scaling founders figured this out years ago.</p>
+            <p data-template-id="final-sub2" class="canva-text text-xl mb-10 font-semibold" style="color: rgb(255, 255, 255); font-weight: 600; font-style: normal; font-size: 16px;">You don't get bigger then build a team. You build a team to get bigger.</p><button data-template-id="final-cta" class="canva-button btn-primary px-10 py-5 rounded-full text-lg font-bold mb-4 shadow-2xl" onclick="document.getElementById('contact-form').scrollIntoView({behavior:'smooth'})" style="background: rgb(59, 130, 246); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Claim My Free Strategy Call →</button>
+            <p data-template-id="final-subtext" class="canva-text text-sm max-w-md mx-auto" style="color: rgb(148, 163, 184); font-weight: 400; font-style: normal; font-size: 16px;">Free 30-min call. No obligation. No pressure. Just a roadmap to scale.</p>
+        </div>
+    </section>
+</main>
+<footer class="w-full px-6 py-8 border-t">
+    <div class="max-w-6xl mx-auto text-center">
+        <p data-template-id="footer-text" class="canva-text text-sm" style="color: rgb(156, 163, 175); font-weight: 400; font-style: normal; font-size: 16px;">© 2025 Logos Recruiting. All rights reserved.</p>
+    </div>
+</footer>
+<script src="/_sdk/6740099151a06780.editing_sdk.js" integrity="sha512-eSc5OWFJjK6fUpxViOKXm5ekJ3Gp5icgygsjPVz9Xzudb9TkX/uNdpqNHc63uN0PdxYE9+g8pZAHIib0FgE0Cw=="></script>
+<script>
+    lucide.createIcons();
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                const el = e.target;
+                const target = parseInt(el.dataset.counter);
+                const prefix = el.dataset.prefix || '';
+                const suffix = el.dataset.suffix || '';
+                let current = 0;
+                const step = Math.max(1, Math.floor(target / 60));
+                const interval = setInterval(() => {
+                    current += step;
+                    if (current >= target) { current = target; clearInterval(interval); }
+                    el.textContent = prefix + current + suffix;
+                }, 25);
+                counterObserver.unobserve(el);
+            }
+        });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('[data-counter]').forEach(el => counterObserver.observe(el));
+
+    const form = document.getElementById('lead-form');
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = form.querySelector('[type="submit"]');
+        btn.disabled = true;
+        btn.style.opacity = '0.6';
+        btn.textContent = 'Sending...';
+
+        const data = {
+            first_name: document.getElementById('fname').value,
+            last_name: document.getElementById('lname').value,
+            phone: document.getElementById('phone').value,
+            email: document.getElementById('email').value,
+            company_size: document.getElementById('company-size').value,
+            message: document.getElementById('message').value
+        };
+
+        const result = await window.dataSdk.create(data);
+        btn.disabled = false;
+        btn.style.opacity = '1';
+
+        if (result.isOk) {
+            form.classList.add('hidden');
+            document.getElementById('form-success').classList.remove('hidden');
+            lucide.createIcons();
+        } else {
+            btn.textContent = 'Something went wrong. Try again.';
+            setTimeout(() => { btn.textContent = ''; }, 3000);
+        }
+    });
+
+    window.dataSdk.init({ onDataChanged() {} });
+</script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a149ffcbc274f202',t:'MTc4Mjk1NzAyMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body></html>
