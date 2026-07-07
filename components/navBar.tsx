@@ -42,7 +42,7 @@ const NavBar = () => {
                     </a>
                 ))}
 
-                <MainBtn text={"Start Building My Team"} href={"/#contact"} textColor={"text-white"} icon={<ArrowRightCircleIcon width={24} height={24} />} />
+                <MainBtn text={"Start Building My Team"} href={"/#contact"} textColor={"text-white"} icon={"arrow-circle"} />
             </div>
 
             {/* Mobile toggle */}
