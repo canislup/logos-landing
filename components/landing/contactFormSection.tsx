@@ -63,7 +63,7 @@ export default function ContactFormSection() {
             <div className="text-center mt-8 mb-16 max-w-4xl">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-slate-900 tracking-tight leading-[1.15]">
                     Let's Build Your Growth Team.<br />
-                    <span className="font-sans font-normal italic text-slate-500">Tell us a little about your business and your hiring goals.</span>
+                    {/*<span className="font-sans font-normal italic text-slate-500">Tell us a little about your business and your hiring goals.</span>*/}
                 </h2>
                 <div className="luxury-divider" />
                 {/*<p className="supporting-text max-w-xl mx-auto">*/}
