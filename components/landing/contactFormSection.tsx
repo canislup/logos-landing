@@ -4,8 +4,26 @@ import React, { useState } from "react";
 import Image from "next/image";
 import TitleTag from "@/components/landing/title-tag";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { useForm, ValidationError } from "@formspree/react";
+import { useRouter } from "next/navigation";
+import SuccessRedirectCard from "@/components/successRedirectCard";
+
 
 export default function ContactFormSection() {
+    const router = useRouter();
+    const [showPopUp, setShowPopUp] = useState(false);
+
+    const formSpreeEndPoint = "https://formspree.io/f/xvzjnpkj";
+
+    const [state, handleSubmit ] = useForm(formSpreeEndPoint);
+
+    // console.log("state", state, "\n", "Handle Form Function: ", handleFormSubmit);
+
+    if(state.succeeded) {
+        return <p>Thanks for the submission</p>
+    }
+
+
     const [formData, setFormData] = useState({
         fullName: "",
         email: "",
@@ -23,21 +41,30 @@ export default function ContactFormSection() {
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleFormSubmit = async (e: React.SubmitEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
 
         try {
-            // Simulate data dispatch delay (Replace this block with your actual API endpoint if needed)
-            await new Promise((resolve) => setTimeout(resolve, 1000));
+            const response = await fetch(formSpreeEndPoint, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ ...formData })
+            });
 
-            // Append user parameters directly to the Calendly URL to pre-fill booking fields
-            const baseCalendlyUrl = "https://calendly.com";
-            const nameParam = encodeURIComponent(formData.fullName);
-            const emailParam = encodeURIComponent(formData.email);
-            const targetUrl = `${baseCalendlyUrl}?name=${nameParam}&email=${emailParam}`;
+            console.log("Response before check",response);
 
-            window.location.href = targetUrl;
+            if(response.ok) {
+                console.log("Form sent successfully!\nResponse: ", response, "\nState: ", state );
+
+                setShowPopUp(true);
+                setIsSubmitting(false);
+
+            }
+
+
         } catch (error) {
             console.error("Transmission failed", error);
             setIsSubmitting(false);
@@ -113,7 +140,7 @@ export default function ContactFormSection() {
 
                 {/* Right Side: Premium Intake Form Card */}
                 <div className="lg:col-span-7 w-full bg-white border border-slate-100 p-8 sm:p-10 rounded-sm shadow-[0_10px_35px_-8px_rgba(0,0,0,0.03)] hover:shadow-[0_15px_45px_-12px_rgba(180,140,100,0.08)] transition-shadow duration-500">
-                    <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+                    <form onSubmit={handleFormSubmit} className="flex flex-col gap-6">
 
                         {/* Full Name Block */}
                         <div className="flex flex-col gap-1.5">
@@ -218,7 +245,7 @@ export default function ContactFormSection() {
                         {/* High-Converting Final Submission CTA */}
                         <button
                             type="submit"
-                            disabled={isSubmitting}
+                            disabled={state.submitting}
                             className="group flex items-center justify-center bg-slate-900 hover:bg-amber-950 text-white gap-3 w-full py-4 rounded-none text-xs font-medium uppercase tracking-widest transition-all duration-300 shadow-xl disabled:bg-slate-400 cursor-pointer mt-2"
                         >
                             {isSubmitting ? "Processing Briefing..." : "Build My Team"}
@@ -230,6 +257,15 @@ export default function ContactFormSection() {
                             By submitting this secure form session, you will be instantly routed to our real-time synchronization framework slot on Calendly.
                         </p>
                     </form>
+
+                    {showPopUp && (
+                        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-md animate-in fade-in duration-500">
+                            {/* We pass the Calendly URL straight into the component */}
+                            <SuccessRedirectCard
+                                destinationUrl="https://calendly.com/logos-recruiting/30min?back=1"
+                            />
+                        </div>
+                    )}
                 </div>
 
             </div>
