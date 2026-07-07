@@ -1,13 +1,13 @@
 import Image from "next/image";
 
-import {ArrowRightCircleIcon, ArrowRightIcon, ArrowLongRightIcon} from "@heroicons/react/24/outline";
+import {ArrowRightCircleIcon, ArrowLongRightIcon} from "@heroicons/react/24/outline";
 
 type props = {
     href: string,
     text: string,
     textColor: string,
     margin?: string
-    icon?: "arrow-right" | "arrow-circle",
+    icon?: string,
 }
 
 const MainBtn = ({ href, text, textColor, margin, icon } : props) => {
