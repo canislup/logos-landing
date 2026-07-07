@@ -51,7 +51,7 @@ export default function ContactFormSection() {
 
             {/* Top Luxury Validation Tag */}
             <TitleTag
-                text="Secure Portal"
+                text="Ready To Stop Being The Entire Company?"
                 textColor="text-slate-800 font-semibold tracking-wider text-xs uppercase"
                 bgColor="bg-amber-500/5"
                 animation={false}
@@ -66,9 +66,18 @@ export default function ContactFormSection() {
                     <span className="font-sans font-normal italic text-slate-500">Tell us a little about your business and your hiring goals.</span>
                 </h2>
                 <div className="luxury-divider" />
-                <p className="supporting-text max-w-xl mx-auto">
-                    We'll identify where you're losing the most time, recommend the highest-impact role to hire first, and show you how to build a stronger business without enterprise-level payroll costs.
-                </p>
+                {/*<p className="supporting-text max-w-xl mx-auto">*/}
+                {/*    We'll identify where you're losing the most time, recommend the highest-impact role to hire first, and show you how to build a stronger business without enterprise-level payroll costs.*/}
+                {/*</p>*/}
+
+                <p className={"supporting-text"}>Book a free 15-minute Growth Blueprint and we'll show you exactly which role your business should hire first.<br/> What you will leave the call with:</p>
+                <div className={"flex items-center justify-center mt-5"}>
+                    <ul className="space-y-4 text-slate-500 relative z-10">
+                        <li className="flex items-start gap-4"><span className="text-amber-600">✓</span> What's currently slowing your growth</li>
+                        <li className="flex items-start gap-4"><span className="text-amber-600">✓</span> Which role will generate the biggest impact</li>
+                        <li className="flex items-start gap-4"><span className="text-amber-600">✓</span> How much you could save with pre-vetted global talent</li>
+                    </ul>
+                </div>
             </div>
 
             {/* Split Form & Image Layout Grid */}

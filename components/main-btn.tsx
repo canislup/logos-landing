@@ -1,11 +1,13 @@
 import Image from "next/image";
 
+import {ArrowRightCircleIcon, ArrowRightIcon, ArrowLongRightIcon} from "@heroicons/react/24/outline";
+
 type props = {
     href: string,
     text: string,
     textColor: string,
     margin?: string
-    icon?: React.ReactNode,
+    icon?: "arrow-right" | "arrow-circle",
 }
 
 const MainBtn = ({ href, text, textColor, margin, icon } : props) => {
@@ -14,7 +16,10 @@ const MainBtn = ({ href, text, textColor, margin, icon } : props) => {
            href={`${href}`}>
             {text}
             <span>
-                {icon ? icon : <Image src={"/arrow-long-right.svg"} alt="Arrow right icon" width={24} height={24} />}
+            {
+                   icon === "arrow-right" ? <ArrowLongRightIcon width={24} height={24} /> : <ArrowRightCircleIcon width={24} height={24} />
+            }
+                {/*{icon ? icon : <Image src={"/arrow-long-right.svg"} alt="Arrow right icon" width={24} height={24} />}*/}
             </span>
         </a>
     )

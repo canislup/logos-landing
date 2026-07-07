@@ -89,6 +89,7 @@ const FounderTrap = () => {
                         <PointCard key={index}
                                    variant="painpoint"
                                    icon={item.icon}
+                                   title={item.title}
                                    text={item.desc} />
                     ))}
                 </div>
@@ -97,19 +98,17 @@ const FounderTrap = () => {
 
             {/* Conversational Bottom Closer Wrap */}
             <div className="mt-20 text-center flex flex-col items-center max-w-md border-t border-slate-200/60 pt-10">
-                <span className="text-xs font-mono uppercase tracking-widest text-amber-800/80 mb-2">The Solution</span>
+                {/*<span className="text-xs font-mono uppercase tracking-widest text-amber-800/80 mb-2">The Solution</span>*/}
                 <h4 className="text-lg md:text-xl font-medium text-slate-900 tracking-tight mb-6">
                     Let’s reclaim your executive focus this week.
                 </h4>
                 <MainBtn
-                    text="Secure Your Strategic Blueprint Call"
+                    text="Get My Time Back"
                     href="/#contact"
                     margin="mt-0"
                     textColor="text-white bg-slate-900 hover:bg-amber-900 rounded-none tracking-wide text-sm font-medium transition-all duration-300 shadow-lg px-8 py-4"
+                    icon={"arrow-right"}
                 />
-                <p className="mt-4 text-xs font-light text-slate-400">
-                    Strictly confidential. Zero commitment. Custom architectural blueprint map included.
-                </p>
             </div>
         </section>
     );

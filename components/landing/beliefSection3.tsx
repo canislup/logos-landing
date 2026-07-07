@@ -2,7 +2,6 @@
 import TitleTag from "@/components/landing/title-tag";
 import PointCard from "@/components/pointCard";
 import MainBtn from "@/components/main-btn";
-import { ArrowRightIcon} from "@heroicons/react/24/outline";
 import {
     BanknotesIcon,
     BriefcaseIcon,
@@ -101,13 +100,13 @@ export default function BeliefShiftSection3() {
 
                         {/* Structured Execution Layout */}
                         <div className="flex-1 flex flex-col justify-between space-y-6">
-                            <div className="flex items-center justify-between border-b border-slate-800 pb-4">
+                            <div className="grid grid-cols-2 items-center  border-b border-slate-800 pb-4">
                                 <span className="text-white font-serif text-xl">The Founder</span>
-                                <span className="text-slate-400 text-sm">Strategy, Growth & Leadership</span>
+                                <span className="text-slate-400 text-sm">The Team</span>
                             </div>
 
                             <div className="grid grid-cols-2 gap-4">
-                                {['Sales', 'Marketing', 'Operations', 'Executive Assistant', 'Customer Support'].map((role) => (
+                                {['Management', 'Marketing', 'Relationship Building', 'Customer Support', 'Operations', 'Sales'].map((role) => (
                                     <div key={role} className="border border-slate-800 bg-slate-800/50 text-slate-300 px-4 py-3 text-xs uppercase tracking-wider rounded-sm">
                                         {role}
                                     </div>
@@ -213,7 +212,7 @@ export default function BeliefShiftSection3() {
 
                 <div className="mt-8 text-lg text-slate-600 max-w-3xl space-y-6">
                     <p>The world&apos;s most successful companies don&apos;t build every part of their business in one office. They manufacture globally. They build technology globally. They operate customer support globally.</p>
-                    <p className="font-medium text-slate-900">They recruit talent wherever exceptional people can be found. Not because they&apos;re looking for cheaper labor. Because they&apos;re building smarter businesses.</p>
+                    <p className="font-medium text-slate-900">They recruit talent wherever exceptional people can be found, because they&apos;re building smarter, efficient businesses. They hire talented individuals overseas at competitive, cost-effective rate.</p>
                 </div>
 
                 {/* Global Infrastructure Row */}
@@ -352,7 +351,7 @@ export default function BeliefShiftSection3() {
                     text="Build My Team"
                     textColor="text-white"
                     margin="mx-auto"
-                    icon={<ArrowRightIcon width={24} height={24}/>}
+                    icon={"arrow-right"}
                 />
             </div>
 

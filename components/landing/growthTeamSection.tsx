@@ -6,37 +6,37 @@ import { UserPlusIcon, MegaphoneIcon, InboxStackIcon } from "@heroicons/react/24
 const GrowthTeamSection = () => {
     const corePillars = [
         {
-            role: "Sales Professional",
-            valueProp: "The Rainmaker",
-            desc: "Engineers modern outbound funnels, qualifies premium deal pipelines, and closes opportunities while you sleep.",
+            role: "Keep Your Pipeline Moving",
+            valueProp: "Sales Professional",
+            desc: "Your sales rep spends every day prospecting, following up with leads, booking meetings, and creating new opportunities, so you can spend more time closing deals instead of chasing them.",
             icon: <UserPlusIcon className="w-5 h-5 text-slate-700 group-hover:text-amber-700 transition-colors" />,
         },
         {
-            role: "Marketing Professional",
-            valueProp: "The Growth Catalyst",
+            role: "Grow Your Brand",
+            valueProp: "Marketing Professional",
             desc: "Architects your digital presence, commands industry authority, and consistently attracts qualified corporate intent.",
             icon: <MegaphoneIcon className="w-5 h-5 text-slate-700 group-hover:text-amber-700 transition-colors" />,
         },
         {
-            role: "Executive Assistant",
-            valueProp: "The Shield",
-            desc: "Intercepts administrative noise, structures your operations, and completely frees up your focus for high-leverage vision.",
+            role: "Get Your Time Back",
+            valueProp: "Executive Assistant",
+            desc: "Your executive assistant handles the day-to-day tasks that steal your attention.",
             icon: <InboxStackIcon className="w-5 h-5 text-slate-700 group-hover:text-amber-700 transition-colors" />,
         },
     ];
 
     return (
         <section className="flex flex-col items-center justify-center py-28 md:py-36 bg-[#FCFAF7] px-4 sm:px-8 md:px-12 relative overflow-hidden">
-            <TitleTag text="The Leverage Frame" textColor="text-slate-800 font-semibold tracking-wider text-xs uppercase" bgColor="bg-amber-500/5" border={true} borderColor="border-amber-700/20" />
+            <TitleTag text="Meet Your First Growth Team" textColor="text-slate-800 font-semibold tracking-wider text-xs uppercase" bgColor="bg-amber-500/5" border={true} borderColor="border-amber-700/20" />
 
             <div className="text-center mt-8 mb-20 max-w-4xl">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-slate-900 tracking-tight leading-[1.15]">
-                    You Don't Need Ten Employees.<br />
-                    <span className="font-sans font-normal italic text-slate-500">You simply need the right three.</span>
+                    You Don't Need A Huge Team<br />
+                    <span className="font-sans font-normal italic text-slate-500">You just need the right people.</span>
                 </h2>
                 <div className="luxury-divider" />
                 <p className="supporting-text max-w-xl mx-auto">
-                    Scale isn't built through massive payroll chaos. It is unlocked by installing three dedicated pillars of elite leverage.
+                    The right team takes work off your plate, gives you back your time, and lets you focus on the one job only you can do: growing the business.
                 </p>
             </div>
 

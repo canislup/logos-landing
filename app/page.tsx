@@ -9,15 +9,18 @@ import Footer from "@/components/landing/footerSection";
 import BeliefShiftSection from "@/components/landing/beliefShiftSection";
 import BeliefShiftSection2 from "@/components/landing/beliefSection2";
 import BeliefShiftSection3 from "@/components/landing/beliefSection3";
+import FounderTrapSection from "@/components/landing/founderTrapSection";
+import  FounderTrap  from '@/components/landing/founderTrapSection'
 
 export default function Home() {
   return (
       <div>
         <HeroSection/>
-        <FounderTrap2 />
+          <FounderTrap />
+        {/*<FounderTrap2 />*/}
         {/*<BeliefShiftSection />*/}
         {/*  <BeliefShiftSection2 />*/}
-          <BeliefShiftSection3 />
+        <BeliefShiftSection3 />
         <GrowthTeamSection/>
         {/*<ProcessSection />*/}
         <VideoReviewsSection/>

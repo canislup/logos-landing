@@ -76,7 +76,7 @@ export default function HeroSection(){
 
             {/* Micro-Copy Trust Element */}
             <p className="mt-6 text-xs font-light text-slate-400 tracking-normal text-center">
-                Confidential 20-min brief. Zero commitment. Walk away with an architectural hiring plan.
+                 15-min brief. Zero commitment. Walk away with a hiring plan.
             </p>
         </section>
     )

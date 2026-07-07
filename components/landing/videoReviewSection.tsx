@@ -43,7 +43,7 @@ const VideoReviewsSection = () => {
 
             {/* Luxury Trust Badge */}
             <TitleTag
-                text="Audited Proof"
+                text="The Results Speak for Themselvs"
                 textColor="text-slate-800 font-semibold tracking-wider text-xs uppercase"
                 bgColor="bg-amber-500/5"
                 animation={false}
@@ -54,12 +54,12 @@ const VideoReviewsSection = () => {
             {/* Copywriting Architecture: High-Intent Headers */}
             <div className="text-center mt-8 mb-24 max-w-4xl">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-slate-900 tracking-tight leading-[1.15]">
-                    Verified Executive Transformations.<br />
+                    Hear It From Founders Who Got Their Time Back<br />
                     <span className="font-sans font-normal italic text-slate-500">Real founders. Real scale.</span>
                 </h2>
                 <div className="luxury-divider" />
                 <p className="supporting-text max-w-2xl mx-auto">
-                    We don't showcase static text strings. Watch exactly how four high-performing CEOs dismantled their operational bottlenecks to architect true corporate freedom.
+                    See how business owners like you built stronger teams, reclaimed their time, and started focusing on growing their companies again.
                 </p>
             </div>
 

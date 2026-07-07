@@ -6,15 +6,15 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     const footerLinks = {
-        platform: [
-            { name: "The 3 Pillars", href: "#pillars" },
-            { name: "7-Day Architecture", href: "#process" },
-            { name: "Audited Case Studies", href: "#results" },
-        ],
         company: [
-            { name: "Confidential Intake", href: "#contact" },
-            { name: "Executive Briefings", href: "/briefings" },
-            { name: "Vetting Standards", href: "/standards" },
+            { name: "About us", href: "#pillars" },
+            { name: "Looking to get hired", href: "#process" },
+            { name: "Testimonials", href: "#results" },
+        ],
+        resources: [
+            { name: "How it works", href: "#contact" },
+            { name: "FAQ", href: "/briefings" },
+            { name: "Blog", href: "/standards" },
         ],
         legal: [
             { name: "Privacy Protocol", href: "/privacy" },
@@ -60,10 +60,10 @@ export default function Footer() {
                         {/* Column 1: System */}
                         <div className="flex flex-col gap-4">
                             <h4 className="text-xs font-mono uppercase tracking-widest text-amber-700 font-semibold">
-                                Architecture
+                                Company
                             </h4>
                             <ul className="flex flex-col gap-2.5">
-                                {footerLinks.platform.map((link) => (
+                                {footerLinks.company.map((link) => (
                                     <li key={link.name}>
                                         <a href={link.href} className="text-sm font-light text-slate-400 hover:text-white transition-colors duration-300 flex items-center gap-0.5 group">
                                             {link.name}
@@ -76,10 +76,10 @@ export default function Footer() {
                         {/* Column 2: Firm */}
                         <div className="flex flex-col gap-4">
                             <h4 className="text-xs font-mono uppercase tracking-widest text-amber-700 font-semibold">
-                                Firm
+                                Resources
                             </h4>
                             <ul className="flex flex-col gap-2.5">
-                                {footerLinks.company.map((link) => (
+                                {footerLinks.resources.map((link) => (
                                     <li key={link.name}>
                                         <a href={link.href} className="text-sm font-light text-slate-400 hover:text-white transition-colors duration-300">
                                             {link.name}
@@ -92,7 +92,7 @@ export default function Footer() {
                         {/* Column 3: Protocols */}
                         <div className="flex flex-col gap-4 col-span-2 sm:col-span-1">
                             <h4 className="text-xs font-mono uppercase tracking-widest text-amber-700 font-semibold">
-                                Protocols
+                                Contact
                             </h4>
                             <ul className="flex flex-col gap-2.5">
                                 {footerLinks.legal.map((link) => (

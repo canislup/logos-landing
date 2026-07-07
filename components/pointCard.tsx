@@ -20,25 +20,7 @@ export default function PointCard({
                                       text
                                   }: PointCardProps) {
 
-    // FIXED: The dynamic word splitter utility function
-    const renderSplitText = (rawText?: string) => {
-        if (!rawText) return null;
-        const words = rawText.split(" ");
-        // Safely capture the first 2 words for strong emphasis
-        const highlighted = words.slice(0, 2).join(" ");
-        const remainder = words.slice(2).join(" ");
-
-        return (
-            <p className="text-sm sm:text-base font-normal text-slate-500 leading-snug">
-        <span className="font-bold text-slate-900 block sm:inline sm:mr-1 tracking-tight group-hover:text-amber-800 transition-colors">
-          {highlighted}
-        </span>
-                {remainder}
-            </p>
-        );
-    };
-
-    // ==========================================
+     // ==========================================
     // VARIANT 1: PAINPOINT CARD (Restored 6-Hats Grid Style)
     // ==========================================
     if (variant === "painpoint") {
@@ -51,14 +33,12 @@ export default function PointCard({
 
                 {/* FIXED CHECK: If 'text' prop string exists, parse it. Otherwise use title & desc */}
                 <div className="shrink">
-                    {text ? (
-                        renderSplitText(text)
-                    ) : (
+
                         <div className="flex flex-col gap-1.5">
                             <h3 className="text-base font-bold text-slate-900 tracking-tight">{title}</h3>
-                            <p className="text-sm font-light text-slate-500 leading-relaxed">{desc}</p>
+                            <p className="text-sm font-light text-slate-500 leading-relaxed">{text}</p>
                         </div>
-                    )}
+
                 </div>
             </div>
         );
