@@ -8,33 +8,33 @@ const FounderTrap = () => {
     const painPoints = [
         {
             icon: <BriefcaseIcon className="w-5 h-5 text-slate-700 group-hover:text-amber-700 transition-colors duration-300" />,
-            title: "CEO & Closer",
-            desc: "Stuck managing high-stakes client acquisition cycles manually.",
+            title: `You're the CEO & Closer`,
+            desc: "Every proposal," + " Every follow-up," + " Every sales call..." + " Still depends on you.",
         },
         {
             icon: <ClockIcon className="w-5 h-5 text-slate-700 group-hover:text-amber-700 transition-colors duration-300" />,
-            title: "Midnight Operations",
-            desc: "Burning execution stamina at odd hours with zero personal switch-off.",
+            title: "Your Workday Never Ends",
+            desc: `You answer emails during dinner. You solve problems before bed. You wake up thinking about tomorrow's to-do list.`,
         },
         {
             icon: <PlusIcon className="w-5 h-5 text-slate-700 group-hover:text-amber-700 transition-colors duration-300" />,
             title: "Leads Slipping",
-            desc: "Premium opportunities falling through due to fragmented follow-up systems.",
+            desc: `You meant to follow up. You just didn't have time. Every missed follow up is revenue left on the table.`,
         },
         {
             icon: <EnvelopeIcon className="w-5 h-5 text-slate-700 group-hover:text-amber-700 transition-colors duration-300" />,
-            title: "Operational Chaos",
-            desc: "Drowning under high inbox volumes and overlapping operational tasks.",
+            title: "Your Inbox Runs Your Day",
+            desc: "Emails. Scheduling. Answering questions. Instead of leading your bussiness you are reacting to it.",
         },
         {
             icon: <PhoneIcon className="w-5 h-5 text-slate-700 group-hover:text-amber-700 transition-colors duration-300" />,
-            title: "The Ticket Trap",
-            desc: "Reactive customer service blocks your highest-leverage deep work.",
+            title: "Customer Support Owns Your Calendar",
+            desc: "Every interruption pulls you away from the work that actually grows the business.",
         },
         {
             icon: <SparklesIcon className="w-5 h-5 text-slate-700 group-hover:text-amber-700 transition-colors duration-300" />,
-            title: "Zero Strategy Space",
-            desc: "No white-space left to safely forecast, engineer, and lead corporate vision.",
+            title: "You Never Have Time to Think",
+            desc: "When was the last time you spent an uninterrupted hour planning the future of your business?",
         },
     ];
 
@@ -42,7 +42,7 @@ const FounderTrap = () => {
         <section id={"pain-points"} className="flex flex-col items-center justify-center pt-32 pb-24 bg-[#FCFAF7] px-4 sm:px-8 md:px-12 selection:bg-amber-100 selection:text-amber-900">
             {/* Elegant Luxury Badge Header */}
             <TitleTag
-                text="The Operational Bottleneck"
+                text="Does This Feel Familiar?"
                 textColor="text-slate-800 font-semibold tracking-wider text-xs uppercase"
                 icon={<ExclamationTriangleIcon width={16} height={16} className="text-amber-700" />}
                 bgColor="bg-amber-500/5"
@@ -53,13 +53,13 @@ const FounderTrap = () => {
 
             {/* High-Converting Editorial Headline */}
             <div className="text-center mt-8 mb-20 max-w-4xl">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-slate-900 tracking-tight leading-[1.12]">
-                    You’re Wearing Six Hats.<br />
-                    <span className="font-sans font-normal italic text-slate-500">That is why scale feels impossible.</span>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-slate-900 tracking-tight leading-[1.12] text-balance">
+                    You're Trying to Do Six Jobs at Once<br />
+                    <span className="font-sans font-normal italic lg:text-5xl text-slate-500 text-balance">No Wonder Growth Feels Impossible.</span>
                 </h2>
                 <div className="w-16 h-[1px] bg-amber-700/30 mx-auto mt-6 mb-6"></div>
                 <p className="text-base sm:text-lg md:text-xl text-slate-600 font-light max-w-2xl mx-auto leading-relaxed text-balance">
-                    Every hour spent managing ground-level logistics is an hour your elite competitors leverage to safely out-pace you.
+                    Every hour you spend answering emails, scheduling meetings, following up with leads, or handling customer support is an hour you're not growing your business.
                 </p>
             </div>
 
@@ -100,7 +100,13 @@ const FounderTrap = () => {
             <div className="mt-20 text-center flex flex-col items-center max-w-md border-t border-slate-200/60 pt-10">
                 {/*<span className="text-xs font-mono uppercase tracking-widest text-amber-800/80 mb-2">The Solution</span>*/}
                 <h4 className="text-lg md:text-xl font-medium text-slate-900 tracking-tight mb-6">
-                    Let’s reclaim your executive focus this week.
+                    The problem isn't that you need to work harder.
+
+                    The problem is that your business depends on you for everything.
+
+                    Until that changes...
+
+                    Neither will your growth.
                 </h4>
                 <MainBtn
                     text="Get My Time Back"

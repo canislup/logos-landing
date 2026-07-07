@@ -16,7 +16,7 @@ export default function Home() {
   return (
       <div>
         <HeroSection/>
-          <FounderTrap />
+        <FounderTrap />
         {/*<FounderTrap2 />*/}
         {/*<BeliefShiftSection />*/}
         {/*  <BeliefShiftSection2 />*/}

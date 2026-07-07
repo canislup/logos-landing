@@ -73,7 +73,7 @@ export default function BeliefShiftSection3() {
                     <div className="group relative bg-white border border-slate-200 p-12 lg:p-16 flex flex-col rounded-sm transition-all duration-500 hover:border-slate-300 shadow-sm">
                         <div className="mb-10">
                             <h3 className="font-serif text-3xl text-slate-900">Most Founders</h3>
-                            <p className="text-slate-500 mt-2 text-sm uppercase tracking-widest font-mono">The Centralized Bottleneck</p>
+                            <p className="text-slate-500 mt-2 text-sm uppercase tracking-widest font-mono">Spread Too Thin</p>
                         </div>
 
                         {/* Chaotic Task Cloud */}
@@ -106,7 +106,7 @@ export default function BeliefShiftSection3() {
                             </div>
 
                             <div className="grid grid-cols-2 gap-4">
-                                {['Management', 'Marketing', 'Relationship Building', 'Customer Support', 'Operations', 'Sales'].map((role) => (
+                                {['Management', 'Marketing', 'Relationship Building', 'Customer Support', 'Strategic Planning', 'Sales'].map((role) => (
                                     <div key={role} className="border border-slate-800 bg-slate-800/50 text-slate-300 px-4 py-3 text-xs uppercase tracking-wider rounded-sm">
                                         {role}
                                     </div>

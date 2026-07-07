@@ -5,7 +5,7 @@ const benefits = [
     "Pay Only When You Hire",
     "Replacement Guarantees",
     "Pre-Vetted Professionals",
-    "Results In One Week"
+    "Fast Candidate Delivery"
 ]
 
 export default function HeroSection(){
@@ -16,7 +16,7 @@ export default function HeroSection(){
 
             {/* Top Luxury Badge */}
             <TitleTag
-                text="Global Talent. Smarter Hiring."
+                text="Helping Founders Build Smarter Teams"
                 textColor="text-slate-800 font-semibold tracking-wider text-xs uppercase"
                 icon={<GlobeAmericasIcon className="text-amber-700" width={16} height={16} />}
                 bgColor="bg-amber-500/5"
@@ -38,7 +38,7 @@ export default function HeroSection(){
 
             {/* Clean Supporting Context Layout */}
             <p className="supporting-text max-w-2xl mx-auto">
-                Build a high-performing global team without enterprise-level overhead. Reclaim your calendar, protect your energy, and scale your vision.
+                Build a high-performing global team that takes work off your plate, gives you back your time, and helps your business grow without enterprise-level hiring costs.
             </p>
 
             {/* Premium Minimalist Benefit Layout Frame */}
@@ -75,9 +75,9 @@ export default function HeroSection(){
             </div>
 
             {/* Micro-Copy Trust Element */}
-            <p className="mt-6 text-xs font-light text-slate-400 tracking-normal text-center">
-                 15-min brief. Zero commitment. Walk away with a hiring plan.
-            </p>
+            {/*<p className="mt-6 text-xs font-light text-slate-400 tracking-normal text-center">*/}
+            {/*     15-min brief. Zero commitment. Walk away with a hiring plan.*/}
+            {/*</p>*/}
         </section>
     )
 }
