@@ -16,7 +16,7 @@ import {
 
 export default function BeliefShiftSection3() {
     return (
-        <section className="relative w-full bg-[#FCFAF7] text-slate-900 overflow-hidden">
+        <section id={"solutions"} className="relative w-full bg-[#FCFAF7] text-slate-900 overflow-hidden">
             {/* Subtle Geometric Mesh Background Overlay */}
             <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(to_right,#1E293B08_1px,transparent_1px),linear-gradient(to_bottom,#1E293B08_1px,transparent_1px)] bg-[size:4rem_4rem]" />
 

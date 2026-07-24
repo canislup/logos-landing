@@ -1,0 +1,38 @@
+[
+  {
+    "founder": "André Ogorodnik",
+    "company": "Pacific Shore Stones",
+    "metric": "74% Revenue Expansion",
+    "timeframe": "First 90 Days",
+    "videoThumbnail": "/images/andre-thumbnail.jpg",
+    "headline": "From 70-hour operational gridlock to an automated outbound machine.",
+    "videoUrl" : "/videos/andre-testimonial.MOV"
+  },
+  {
+    "founder": "Tyler Kaplan",
+    "company": "Saiens International",
+    "metric": "Scale from $40k to $185k/mo",
+    "timeframe": "6 Months Post-Handoff",
+    "videoThumbnail": "/images/andre-thumbnail.jpg",
+    "headline": "Stepping completely out of delivery allowed us to safely triple our capacity.",
+    "videoUrl" : "/videos/andre-testimonial.MOV"
+  },
+  {
+    "founder": "Horacio Valdez",
+    "company": "Big Leo's Home Remodelling",
+    "metric": "320+ Executive Hours Reclaimed",
+    "timeframe": "Within 45 Days",
+    "videoThumbnail": "/images/andre-thumbnail.jpg",
+    "headline": "I replaced myself with their elite 3-pillar framework. The best ROI of my career.",
+    "videoUrl" : "/videos/andre-testimonial.MOV"
+  },
+  {
+    "founder": "James Pleasant",
+    "company": "Core Health Systems",
+    "metric": "2.4x Deal Pipeline Velocity",
+    "timeframe": "First 120 Days",
+    "videoThumbnail": "/images/andre-thumbnail.jpg",
+    "headline": "The screening rigor is unparalleled. Our sales professional closed 3 premium contracts in week two.",
+    "videoUrl" : "/videos/andre-testimonial.MOV"
+  }
+]

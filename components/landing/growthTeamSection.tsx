@@ -56,7 +56,7 @@ const GrowthTeamSection = () => {
 
             <div className="mt-20 text-center flex flex-col items-center max-w-2xl border-t border-slate-200/60 pt-12">
                 <p className="text-base md:text-lg font-light text-slate-600 mb-8 leading-relaxed">
-                    Imagine how much faster your architecture could expand if you weren't forcing yourself to perform all three roles simultaneously.
+                    Imagine how much faster your company could grow if you weren't forcing yourself to perform all three roles simultaneously.
                 </p>
                 <MainBtn text="Build My Core Team" href="/#contact" margin="mt-0" textColor="text-white bg-slate-900 hover:bg-amber-950 rounded-none tracking-wide text-sm font-medium transition-all duration-300 shadow-xl px-10 py-5" />
             </div>

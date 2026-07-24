@@ -61,7 +61,6 @@ export default function ContactFormSection() {
 
                 setShowPopUp(true);
                 setIsSubmitting(false);
-
             }
 
 
@@ -241,6 +240,18 @@ export default function ContactFormSection() {
                         {/*        className="w-full px-4 py-3 border border-slate-200 rounded-sm text-sm font-light text-slate-900 bg-[#FCFAF7]/40 placeholder-slate-300 focus:outline-none focus:border-amber-700 focus:bg-white transition-all duration-300 resize-none"*/}
                         {/*    />*/}
                         {/*</div>*/}
+                        <label className="flex items-center gap-2 cursor-pointer select-none" htmlFor={"consent"} >
+                            <input
+                                type="checkbox"
+                                className="w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500"
+                                required={true}
+                                name="consent"
+                                id="consent"
+                            />
+                            <span className="text-sm font-medium text-gray-700">
+                                By checking this box, I agree to the <a href={"/privacy"} target={"_blank"} className={"text-blue-600 underline"}>Terms & Conditions and Privacy Policy</a> and consent to receive calls and texts from Logos Recruiting at the number provided. *
+                            </span>
+                        </label>
 
                         {/* High-Converting Final Submission CTA */}
                         <button
@@ -254,7 +265,7 @@ export default function ContactFormSection() {
 
                         {/* Verification Footer Text */}
                         <p className="text-center text-[11px] text-slate-400 font-light leading-relaxed">
-                            By submitting this secure form session, you will be instantly routed to our real-time synchronization framework slot on Calendly.
+                            By submitting this form, you will be instantly redirected to our Calendly to book a call.
                         </p>
                     </form>
 

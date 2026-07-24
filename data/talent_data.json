@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Mateus Silva",
+    "role": "Senior React Native Developer",
+    "salary": "$3,500 / mo",
+    "country": "Brazil",
+    "thumbnailUrl": "/images/video1-thumbnail.png",
+    "videoUrl": "/videos/video-1.mov"
+  },
+  {
+    "name": "Sofia Reyes",
+    "role": "Executive Assistant",
+    "salary": "$1,200 / mo",
+    "country": "Colombia",
+    "thumbnailUrl": "/images/talent-sofia.jpg",
+    "videoUrl": "/videos/talent-sofia.mp4"
+  },
+  {
+    "name": "Miguel Santos",
+    "role": "B2B Sales Representative",
+    "salary": "$1,800 / mo + Comm",
+    "country": "Philippines",
+    "thumbnailUrl": "/images/talent-miguel.jpg",
+    "videoUrl": "/videos/talent-miguel.mp4"
+  },
+  {
+    "name": "Camila Costa",
+    "role": "Marketing Operations Lead",
+    "salary": "$2,100 / mo",
+    "country": "Brazil",
+    "thumbnailUrl": "/images/talent-camila.jpg",
+    "videoUrl": "/videos/talent-camila.mp4"
+  },
+  {
+    "name": "Isabella Cruz",
+    "role": "Customer Success Manager",
+    "salary": "$1,500 / mo",
+    "country": "Philippines",
+    "thumbnailUrl": "/images/talent-isabella.jpg",
+    "videoUrl": "/videos/talent-isabella.mp4"
+  },
+  {
+    "name": "Diego Fernandez",
+    "role": "Full-Stack Software Engineer",
+    "salary": "$3,200 / mo",
+    "country": "Colombia",
+    "thumbnailUrl": "/images/talent-diego.jpg",
+    "videoUrl": "/videos/talent-diego.mp4"
+  },
+  {
+    "name": "Lucas Oliveira",
+    "role": "Data Analyst",
+    "salary": "$2,400 / mo",
+    "country": "Brazil",
+    "thumbnailUrl": "/images/talent-lucas.jpg",
+    "videoUrl": "/videos/talent-lucas.mp4"
+  },
+  {
+    "name": "Elena Rodriguez",
+    "role": "Financial Controller",
+    "salary": "$2,800 / mo",
+    "country": "Colombia",
+    "thumbnailUrl": "/images/talent-elena.jpg",
+    "videoUrl": "/videos/talent-elena.mp4"
+  }
+]

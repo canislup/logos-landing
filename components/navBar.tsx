@@ -12,8 +12,8 @@ interface NavLink {
 
 const NAV_LINKS: NavLink[] = [
     { label: "Home", href: "/" },
-    { label: "Why Logos", href: "/why-logos" },
-    { label: "Solutions", href: "/solutions" },
+    { label: "Why Logos", href: "/#pain-points" },
+    { label: "Solutions", href: "/#solutions" },
     { label: "Success Stories", href: "/#results" },
 ];
 
@@ -86,7 +86,7 @@ const NavBar = () => {
 
                     <a
                         className="mobile-nav-cta"
-                        href="/get-started"
+                        href="/#contact"
                         onClick={() => setIsOpen(false)}
                     >
                         Start Building My Team

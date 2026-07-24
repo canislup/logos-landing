@@ -8,18 +8,18 @@ export default function Footer() {
     const footerLinks = {
         company: [
             { name: "About us", href: "#pillars" },
-            { name: "Looking to get hired", href: "#process" },
+            { name: "Looking to get hired", href: "https://recruitcrm.io/talent_pool_submission/logos_recruiting" },
             { name: "Testimonials", href: "#results" },
         ],
         resources: [
             { name: "How it works", href: "#contact" },
-            { name: "FAQ", href: "/briefings" },
-            { name: "Blog", href: "/standards" },
+            { name: "FAQ", href: "/faq" },
+            { name: "Blog", href: "/blog" },
         ],
         legal: [
-            { name: "Privacy Protocol", href: "/privacy" },
-            { name: "Nondisclosure Terms", href: "/nda" },
-            { name: "Service Agreement", href: "/terms" },
+            { name: "Privacy Policy", href: "/privacy" },
+            { name: "Terms of Use", href: "/privacy" },
+            // { name: "Service Agreement", href: "/terms" },
         ],
     };
 
@@ -38,7 +38,7 @@ export default function Footer() {
                         <div className="logo-container">
                             <a href="#">
                                 <Image
-                                    src="/horizontal-no-bg.png"
+                                    src="/images/logo-dark-bg.png"
                                     alt="Logos Recruiting"
                                     className="logo"
                                     fill
@@ -51,7 +51,7 @@ export default function Footer() {
                         {/* Status Indicator */}
                         <div className="flex items-center gap-2 px-3 py-1 bg-slate-800 border border-slate-700/60 rounded-none">
                             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                            <span className="text-[10px] font-mono uppercase tracking-widest text-slate-300">Cohort Induction Open</span>
+                            <span className="text-[10px] font-mono uppercase tracking-widest text-slate-300">Find Top Tier Talent</span>
                         </div>
                     </div>
 
@@ -113,14 +113,14 @@ export default function Footer() {
 
                     {/* Copyright Data */}
                     <div className="text-xs font-light text-slate-500 tracking-normal text-center sm:text-left">
-                        © {currentYear} Logos Recruiting. All rights classified reserved.
+                        © {currentYear} Logos Recruiting. All rights reserved.
                     </div>
 
                     {/* Secure Execution Link Accent */}
-                    <div className="flex items-center gap-1 text-[11px] font-mono uppercase tracking-wider text-slate-500 hover:text-amber-700 transition-colors duration-300 cursor-pointer group">
-                        <span>Secure Encryption Active</span>
-                        <ArrowUpRightIcon className="w-3 h-3 transform transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                    </div>
+                    {/*<div className="flex items-center gap-1 text-[11px] font-mono uppercase tracking-wider text-slate-500 hover:text-amber-700 transition-colors duration-300 cursor-pointer group">*/}
+                    {/*    <span>Secure Encryption Active</span>*/}
+                    {/*    <ArrowUpRightIcon className="w-3 h-3 transform transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />*/}
+                    {/*</div>*/}
 
                 </div>
 

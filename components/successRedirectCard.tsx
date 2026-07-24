@@ -49,7 +49,7 @@ export default function SuccessRedirectCard({
                     Your request has been received successfully.
                 </p>
                 <p>
-                    The next step is to book your free Growth Blueprint session, where we'll help you identify the biggest bottleneck holding your business back and show you how the right team can give you back your time.
+                    The next step is to book your free Growth Blueprint session.
                 </p>
             </div>
 
@@ -60,7 +60,7 @@ export default function SuccessRedirectCard({
                 <div className="flex items-center space-x-3 text-slate-900 font-mono text-sm tracking-widest uppercase">
                     {/* Custom Elegant Spinner */}
                     <div className="w-4 h-4 border-2 border-slate-200 border-t-amber-900 rounded-full animate-spin" />
-                    <span>Redirecting to live calendar...</span>
+                    <span>Redirecting to our calendar...</span>
                 </div>
                 <p className="text-sm text-slate-400">
                     Please don't close this page. You'll be redirected automatically in just a few seconds.
