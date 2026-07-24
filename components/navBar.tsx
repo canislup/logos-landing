@@ -25,7 +25,7 @@ const NavBar = () => {
             <div className="logo-container">
                 <a href="#">
                     <Image
-                        src="/horizontal-no-bg.png"
+                        src="/images/horizontal-no-bg.png"
                         alt="Logos Recruiting"
                         className="logo"
                         fill

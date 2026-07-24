@@ -121,7 +121,7 @@ export default function ContactFormSection() {
                     {/* Main Secure Image Wrapper */}
                     <div className="relative w-full h-full overflow-hidden rounded-sm shadow-xl">
                         <Image
-                            src="/coworkers-meeting.webp"
+                            src="/images/coworkers-meeting.webp"
                             alt="Premium confidential executive strategy briefing"
                             fill
                             className="object-cover transition-transform duration-700 scale-100 group-hover/img:scale-103"
