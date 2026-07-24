@@ -74,7 +74,7 @@ const FounderTrap = () => {
 
                     <div className="relative w-full h-full overflow-hidden rounded-sm shadow-xl">
                         <Image
-                            src="/burned-out-business-owner.webp"
+                            src="/images/burned-out-business-owner.webp"
                             alt="High-performing executive processing severe burnout"
                             fill
                             className="object-cover transition-transform duration-700 scale-100 group-hover/img:scale-105"
